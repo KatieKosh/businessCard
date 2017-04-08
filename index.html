@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Business Card</title>
+ <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<style>
+body {
+/*background-image: url("lunchBoxWood.jpeg");*/
+background-color:#00FFFF;
+font-style: italic;
+margin-top: 60px;
+}
+
+ </style>   
+
+
+</head>
+<body>
+    
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Business Card Designer</h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid"></div>
+<div class="col-sm-12 col-md-6 background">
+    
+    
+    <form id="cardInfo" class="form-horizontal">
+        
+        <div class= "form-group">
+            <label for="inputCompany" class="col-sm-3 control-label">Company Name:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="inputCompany" onkeyup="printCompany()">
+            </div>
+        </div>
+
+
+
+        <div class= "form-group">
+            <label for="inputBg" class="col-sm-3 control-label">Company Message:</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="inputMessage" onkeyup="printMessage()">
+            </div>
+        </div>
+
+
+
+ <div class= "form-group">
+            <label for="inputBg" class="col-sm-3 control-label">Background Color:</label>
+            <div class="col-sm-9">
+                <input type="color" class= "form-control" input id="inputBg" value="#ffb74d" onchange="changeBg()" id="inputBG" onkeyup="printCompany()">
+            </div>
+        </div>
+
+<div class= "form-group">
+            <label for="inputBg" class="col-sm-3 control-label">Text Color:</label>
+            <div class="col-sm-9">
+                <input type="color" class= "form-control" input id="inputBg" value="#A9A9A9" onchange="changeBg()" id="inputCompany" onkeyup="printCompany()">
+            </div>
+        </div>
+
+
+<div class= "form-group">
+            <label for="inputBg" class="col-sm-3 control-label">Text Align</label>
+            <div class="col-sm-9">
+                <input type="button" class="btn btn-info" value="Left" id="text-left" onclick="textAlign(this.id)">
+                 <input type="button" class="btn btn-info" value="Center" id="text-center" onclick="textAlign(this.id)">
+                 <input type="button" class="btn btn-info" value="Right" id="text-right" onclick="textAlign(this.id)">
+            </div>
+            </div>
+
+
+
+<div class= "form-group">
+            <label for="inputName" class="col-sm-3 control-label">Name:</label>
+            <div class="col-sm-9">
+                <input type="text" class= "form-control" input id="inputName" onkeyup="printName()">
+            </div>
+        </div>
+
+
+
+
+
+
+<div class= "form-group">
+            <label for="inputJob" class="col-sm-3 control-label">Job Title:</label>
+            <div class="col-sm-9">
+                <input type="text" class= "form-control" input id="inputJob" id="inputCompany" onkeyup="printJob()">
+            </div>
+        </div>
+
+<div class= "form-group">
+            <label for="inputName" class="col-sm-3 control-label">Email:</label>
+            <div class="col-sm-9">
+                <input type="text" class= "form-control" input id="inputEmail" onkeyup="printEmail()">
+            </div>
+        </div>
+
+
+<div class= "form-group">
+            <label for="inputTelephone" class="col-sm-3 control-label">Telephone Number:</label>
+            <div class="col-sm-9">
+                <input type="text" class= "form-control" input id="inputTelephone" onkeyup="printTelephone()">
+            </div>
+        </div>
+
+
+<div class="form-group">
+    <div class="col-sm-3 col-sm-offset-3">
+        <input type="button" onclick="fromSubmit()" value="Submit">
+    </div>
+
+    <div class="col-sm-3">
+        <input type="button" onclick="fromReset()" value="Clear">
+    </div>
+    </div>
+
+</form>
+</div>
+
+<div class="col-sm-12 col-md-6">
+    <div id="card">
+        <h3 id="outputCompany">Company Name</h3>
+        <p id="outputMessage" class="small">Company Message</p><hr>
+        <p id="outputName" class="small">Your Name</p>
+        <p id="outputJob" class="small">Job Title</p>
+        <p id="outputEmail" class="small">Your Email</p>
+        <p id="outputTelephone" class="small">Telephone</p>
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+function printCompany() {
+document.getElementById('outputCompany').innerHTML = inputCompany.value;
+
+}
+
+function printMessage() {
+document.getElementById('outputMessage').innerHTML = inputMessage.value;
+
+}
+
+function changeBg () {
+    var bgColor = document.getElementById('inputBg').value;
+    document.getElementById('card').style.background = bgColor;
+}
+
+
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa
+                    " crossorigin="anonymous "></script>
+</body>
+</html>
