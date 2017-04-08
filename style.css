@@ -5,14 +5,29 @@ width: 400px;
 height: 250px;
 border: 1px solid;
 padding: 10px;
-
-
 }
 
-.background
+form {
+  margin-left: 100px;
+  color: white;;
+}
 
-{
 
-background-color: white;
+body {
+    padding-top: 70px;
+    background-image: url(lunchBoxWood.jpeg);
+    background-size: cover;
+    margin-left: 150px;
+}
+
+.form-horizontal {
+
+  margin-top: 70px;
+  background-color: grey;
+}
+
+
+#card {
+margin-top: 70px;
 
 }
