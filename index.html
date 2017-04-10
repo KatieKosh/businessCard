@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Business Card</title>
- <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
  <link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,7 +25,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <h1><center>Business Card Designer</center></h1>
+          <div class = "title">
+            <center>Business Card Designer</center>
+          </div>
         </div>
     </div>
 </div>
@@ -65,7 +67,7 @@
 <div class= "form-group">
             <label for="inputBg" class="col-sm-3 control-label">Text Color:</label>
             <div class="col-sm-9">
-                <input type="color" class= "form-control" input id="inputBg" value="#A9A9A9" onchange="changeBg()" id="inputCompany" onkeyup="printCompany()">
+                <input type="color" class= "form-control" input id="inputText" value="#A9A9A9" onchange="changeText()" id="inputCompany" onkeyup="printCompany()">
             </div>
         </div>
 
@@ -118,11 +120,11 @@
 
 <div class="form-group">
     <div class="col-sm-3 col-sm-offset-3">
-        <input type="button" onclick="fromSubmit()" value="Submit">
+        <input type="button" onclick="formSubmit()" value="submit">
     </div>
 
     <div class="col-sm-3">
-        <input type="button" onclick="fromReset()" value="Clear">
+        <input type="button" onclick="formReset()" value="clear">
     </div>
     </div>
 
@@ -142,7 +144,7 @@
 
 
 
-
+</body>
 
 
 
@@ -164,9 +166,52 @@ function changeBg () {
     document.getElementById('card').style.background = bgColor;
 }
 
+function changeText() {
+  var textColor = document.getElementById('inputText').value;
+  document.getElementById('card').style.color = textColor;
+}
+
+function textAlign(selected_id) { document.getElementById('card').className = selected_id;
+
+  }
+
+  function printName() {
+    document.getElementById('outputName').innerHTML = inputName.value;
+
+  }
+
+  function printJob() {
+    document.getElementById('outputJob').innerHTML = inputJob.value;
+  }
+
+  function printEmail() {
+    document.getElementById('outputEmail').innerHTML = inputEmail.value;
+  }
+
+  function printTelephone() {
+    document.getElementById('outputTelephone').innerHTML = inputTelephone.value;
+  }
+
+  function formSubmit(){
+    if (!inputName.value) {alert("Please complete all required sections");
+  }
+}
+  function formReset(){
+        window.location.reload();
+
+  }
+
+
+
+
+
+
 
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa
                     " crossorigin="anonymous "></script>
-</body>
+
+
+
+
 </html>

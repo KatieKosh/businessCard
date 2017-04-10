@@ -1,6 +1,6 @@
 
 #card {
-
+margin-top: 70px;
 width: 400px;
 height: 250px;
 border: 1px solid;
@@ -13,21 +13,25 @@ form {
 }
 
 
+.title {
+font-family: 'Macondo', cursive;
+font-size: 100px;
+
+}
+
 body {
     padding-top: 70px;
     background-image: url(lunchBoxWood.jpeg);
     background-size: cover;
     margin-left: 150px;
+    border: 30px solid white;
+
 }
 
 .form-horizontal {
-
+  padding: 50px;
   margin-top: 70px;
   background-color: grey;
-}
-
-
-#card {
-margin-top: 70px;
-
+  clear: both;
+  border: 30px solid white;
 }
